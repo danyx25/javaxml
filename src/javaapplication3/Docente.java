@@ -7,26 +7,20 @@ package javaapplication3;
  */
 public class Docente {
     
-    String nombre, username,id, password;
+    String id,nombre,username,password;
     
 
-    public String getiD() {
+    Docente() {
+       
+    }
+
+    public String getId() {
         return id;
     }
 
-    public void setiD(String d) {
-        this.id = d;
+    public void setId(String id) {
+        this.id = id;
     }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-   
 
     public String getNombre() {
         return nombre;
@@ -44,12 +38,28 @@ public class Docente {
         this.username = username;
     }
 
-    public Docente(String id, String password, String nombre, String username) {
-        this.id = id;
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Docente(String id, String nombre, String username, String password) {
+        this.id = id;
         this.nombre = nombre;
         this.username = username;
+        this.password = password;
     }
+    
+
+    @Override
+    public String toString() {
+        return "Docente{" + "id=" + id + ", nombre=" + nombre + ", username=" + username + ", password=" + password + '}';
+    }
+
+    
 
    
     
